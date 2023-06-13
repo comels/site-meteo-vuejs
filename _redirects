@@ -2,4 +2,4 @@
 
 # SPA setup - redirect all to index
 
-/\* /index.html 200
+/* /index.html 200
