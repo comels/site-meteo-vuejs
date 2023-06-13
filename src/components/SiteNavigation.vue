@@ -43,8 +43,7 @@ const addCity = () => {
     >
       <RouterLink :to="{ name: 'home' }">
         <div class="flex items-center gap-3">
-          <i class="fa-solid fa-sun text-2xl"></i>
-          <p class="text-2xl">The Local Weather</p>
+          <p class="text-2xl font-light">METEOVUE</p>
         </div>
       </RouterLink>
       <div class="flex flex-1 justify-end gap-3">
@@ -60,31 +59,25 @@ const addCity = () => {
       </div>
       <BaseModal :modalActive="modalActive" @close-modal="toggleModal">
         <div class="text-black">
-          <h1 class="text-2xl mb-1">About:</h1>
-          <p class="mb-4">
-            The Local Weather allows you to track the current and future weather
-            of cities of your choosing.
-          </p>
-          <h2 class="text-2xl">How it works:</h2>
+          <h2 class="text-2xl">Comment ça marche :</h2>
           <ol class="list-decimal list-inside mb-4">
             <li>
-              Search for your city by entering the name into the search bar.
+              Recherchez votre ville en saisissant son nom dans la barre de
+              recherche.
             </li>
+            <li>Sélectionnez une ville parmi les résultats.</li>
             <li>
-              Select a city within the results, this will take you to the
-              current weather for your selection.
-            </li>
-            <li>
-              Track the city by clicking on the "+" icon in the top right. This
-              will save the city to view at a later time on the home page.
+              Suivez la ville en cliquant sur l'icône "+" en haut à droite. La
+              ville est ainsi enregistrée et peut être consultée ultérieurement
+              sur la page d'accueil.
             </li>
           </ol>
 
-          <h2 class="text-2xl">Removing a city</h2>
+          <h2 class="text-2xl">Supprimer une ville :</h2>
           <p>
-            If you no longer wish to track a city, simply select the city within
-            the home page. At the bottom of the page, there will be am option to
-            delete the city.
+            Si vous ne souhaitez plus suivre une ville, il vous suffit de la
+            sélectionner sur la page d'accueil. En bas de la page, vous aurez la
+            possibilité de supprimer la ville.
           </p>
         </div>
       </BaseModal>

@@ -60,7 +60,8 @@ const previewCity = (searchResult) => {
       >
         <p v-if="error">Sorry, something went wrong, please try again.</p>
         <p v-if="!error && mapboxResult.length === 0">
-          No results match your query, try a different term.
+          Aucun résultat ne correspond à votre recherche, essayez une autre
+          ville.
         </p>
         <template v-else>
           <li

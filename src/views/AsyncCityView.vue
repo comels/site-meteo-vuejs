@@ -49,12 +49,12 @@ const weatherData = await getWeatherData();
       v-if="route.query.preview"
       class="text-white p-4 bg-weather-secondary w-full text-center"
     >
-      <p>Click + to add the city.</p>
+      <p>Click + pour ajouter une ville.</p>
     </div>
     <!-- Weather Overview -->
-    <div class="flex flex-col items-center text-white py-12">
+    <div class="flex flex-col items-center text-white py-5">
       <h1 class="text-2xl mb-2">{{ route.params.city }}</h1>
-      <p class="text-sm mb-12">
+      <p class="text-sm mb-5">
         {{
           new Date(weatherData.currentTime).toLocaleDateString("fr", {
             weekday: "short",
@@ -68,15 +68,14 @@ const weatherData = await getWeatherData();
           })
         }}
       </p>
-      <p class="text-5xl mb-5">
-        {{ Math.round(weatherData.current.temp) }}&deg
-      </p>
-
-      <img
-        class="h-auto w-[150px]"
-        :src="`https://openweathermap.org/img/wn/${weatherData.current.weather[0].icon}@2x.png`"
-        alt="icon-weather"
-      />
+      <div class="flex items-center">
+        <img
+          class="h-auto w-[70px]"
+          :src="`https://openweathermap.org/img/wn/${weatherData.current.weather[0].icon}@2x.png`"
+          alt="icon-weather"
+        />
+        <p class="text-5xl">{{ Math.round(weatherData.current.temp) }}&deg</p>
+      </div>
     </div>
     <hr class="border-white border-opacity-10 border w-full" />
 
@@ -109,7 +108,7 @@ const weatherData = await getWeatherData();
     <hr class="border-white border-opacity-10 border w-full" />
 
     <!-- Weekly Weather -->
-    <div class="max-w-screen-md w-full py-12">
+    <div class="max-w-screen-md w-full py-5">
       <div class="mx-8 text-white">
         <div
           v-for="day in weatherData.daily"
@@ -142,7 +141,7 @@ const weatherData = await getWeatherData();
       @click="removeCity"
     >
       <i class="fa-solid fa-trash"></i>
-      <p>Remove City</p>
+      <p>Supprimer la ville</p>
     </div>
   </div>
 </template>

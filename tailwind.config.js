@@ -10,6 +10,7 @@ module.exports = {
     },
     fontFamily: {
       Roboto: ["Roboto, sans-serif"],
+      Montserrat: ["Montserrat, sans-serif"],
     },
     container: {
       padding: "2rem",

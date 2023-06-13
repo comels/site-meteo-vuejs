@@ -42,6 +42,7 @@ await getCities();
     <CityCard :city="city" @click="goToCity(city)" />
   </div>
   <p v-if="savedCities.length === 0">
-    No locations added. To start tracking a location, search in the field above.
+    Aucune ville n'a été ajoutée. Pour commencer à suivre une ville, effectuez
+    une recherche dans le champ ci-dessus.
   </p>
 </template>
